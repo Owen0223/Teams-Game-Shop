@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Payment.master.cs" Inherits="labexw2.Payment1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="TeamsDesign.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+    .auto-style1 {
+        width: 434px;
+    }
+    .auto-style3 {
+        width: 100%;
+        Height:55px;
+        text-align: center;
+    }
+    .auto-style4 {
+        width: 100%;
+        text-align: right;
+    }
+</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <asp:Image ID="imgTeamsLogo" runat="server" ImageUrl="~/images/TeamsImage/TeamsCircle.png" ImageAlign="AbsMiddle" Height="50px" Width="60px" />
+                    </td>
+                    <td>
+                        <h1 class="auto-style1">Teams' Games Store</h1>
+                    </td>
+                    <td style="text-align:right; padding-right:10px;" class="auto-style4">
+                        <asp:Label ID="lblInfo" runat="server" Text="Guest" ></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Image ID="imgUser" runat="server" ImageUrl="~/images/TeamsImage/Userdefault.png" Hegith="65px" Width="65px"/>
+                    </td>
+                </tr>
+            </table>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

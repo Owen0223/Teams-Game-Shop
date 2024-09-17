@@ -1,0 +1,30 @@
+﻿body {
+    padding-left:35px;
+    padding-right:35px;
+    color: rgb(225, 241, 255);
+    background-color: rgb(0, 14, 110);
+}
+
+h1 {
+    padding-left:10px;
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+}
+
+table tr td a {
+    text-decoration:none;
+    color: rgb(0, 41, 203);
+}
+
+table tr td a:hover{
+    text-decoration:underline;
+    color: rgb(0, 14, 110);
+}
+
+td.auto-style3 {
+    padding: 10px;
+    text-align:center;
+}
+
+td.auto-style3 a{
+    margin-right: 150px;
+}

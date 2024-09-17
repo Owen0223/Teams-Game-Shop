@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Teams.Master.cs" Inherits="labexw2.Site1" %>
+
+<%@ Register Src="~/Catecontrol.ascx" TagPrefix="uc1" TagName="Catecontrol" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <link href="TeamsDesign.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 434px;
+        }
+        .auto-style3 {
+            width: 100%;
+            Height:55px;
+            text-align: center;
+        }
+        .auto-style4 {
+            width: 100%;
+            text-align: right;
+        }
+        .auto-style5 {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width: 100%;">
+                <tr>
+                    <td>
+                        <asp:Image ID="imgTeamsLogo" runat="server" ImageUrl="~/images/TeamsImage/TeamsCircle.png" ImageAlign="AbsMiddle" Height="50px" Width="60px" />
+                    </td>
+                    <td>
+                        <h1 class="auto-style1">Teams' Games Store</h1>
+                    </td>
+                    <td class="auto-style4">
+                        <asp:Label ID="lblInfo" runat="server" Text="Guest" ></asp:Label><br />
+                        <asp:Button ID="btnLogin" runat="server" Text="Login" Height="25px" Width="45px" OnClick="btnLogin_Click"/>
+                        <asp:Button ID="btnEdit" runat="server" Text="Edit" Height="25px" Width="45px" OnClick="btnEdit_Click" />
+                        <asp:Button ID="btnLogout" runat="server" Text="Log Out" Height="25px" Width="65px" OnClick="btnLogout_Click"/>
+                    </td>
+                    <td class="auto-style5">
+                        <asp:Image ID="imgUser" runat="server" ImageUrl="~/images/TeamsImage/Userdefault.png" Height="65px" Width="65px"/>
+                    </td>
+                </tr>
+            </table>
+            <table style="width: 100%;">
+                <tr class="auto-style3" style="background-color: rgb(113, 182, 252); font-size: x-large; font-weight: bold;">
+                    <td>
+                        <a href="home.aspx">Home</a>&nbsp;&nbsp;&nbsp;
+                        <a href="Library.aspx">Library</a>&nbsp;&nbsp;&nbsp;
+                        <a href="TeamsCart.aspx">Cart List</a>&nbsp;&nbsp;&nbsp;
+                        <a href="FAQ.aspx">FAQ</a>&nbsp;&nbsp;&nbsp;
+                        <a href="Feedback.aspx">FeedBack Form</a>
+                    </td>
+                </tr>
+                <tr style="background-color:rgb(136, 186, 237); text-align:center;">
+                    <td>
+                        <nav>
+                            <uc1:Catecontrol runat="server" ID="Catecontrol" />
+                        </nav>
+                    </td>
+                </tr>
+                <tr>         
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr style="background-color: rgb(113, 182, 252);">
+                    <td>
+                        <p style="text-align:right; color:rgb(0, 14, 110);" >&copy; 2023 Teams Corporation. All rights reserved.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
